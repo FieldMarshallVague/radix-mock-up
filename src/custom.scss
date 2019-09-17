@@ -1,0 +1,12 @@
+/***
+define custom vars etc. here, before bootstrap SCSS
+***/
+
+@import 'global.scss';
+
+/***
+Now it is OK to import Bootstrap stuff
+***/
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
