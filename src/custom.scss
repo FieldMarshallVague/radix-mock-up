@@ -11,3 +11,18 @@ Now it is OK to import Bootstrap stuff
 
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
+
+:root {
+  --background-color: #ffffff;
+  --test: #ff99cc;
+  --primary-color: #fa6980;
+  --border-color: #ebeded;
+  --nav-color: #333333;
+  --nav-color-alt: #888888;
+}
+
+$theme-colors: (
+  'primary': #0074d9,
+  'danger': #ff4136,
+  'danger2': #ff4136
+);

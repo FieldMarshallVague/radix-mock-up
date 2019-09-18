@@ -1,22 +1,16 @@
 html {
-    box-sizing: border-box;
-    // font-size: 62.5%;
-    // font-size: 62.5%;
+  box-sizing: border-box;
+  // font-size: 62.5%;
+  // font-size: 62.5%;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    // font-size: 1.4rem;
-    --background-color: #ffffff;
-    --test: #ff99cc;
-    --primary-color: #FA6980;
-    --border-color: #EBEDED;
-    --nav-color: #333333;
-    --nav-color-alt: #888888;
+  font-family: 'Open Sans', sans-serif;
+  // font-size: 1.4rem;
 }
