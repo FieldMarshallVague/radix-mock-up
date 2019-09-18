@@ -25,7 +25,6 @@
 
     </b-navbar>
   </div>
-
   
 </template>
 
@@ -48,6 +47,7 @@ nav.navbar.navbar-light a.nav-link.logo-link {
   text-transform: uppercase;
   margin-left: 0;
   margin-right: 1em;
+  padding: 0.5em 0.5em;
   font-weight:600;
 }
 
@@ -105,15 +105,20 @@ nav.navbar.navbar-light {
 
 
 
-
+.navbar-toggler {
+  border: 0;
+}
 
 nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
+// .navbar-toggler .navbar-toggler-icon {
   color: red;
+  border: 2px solid #f00 !important;
   background-color:#0000ff;
   background: url(/img/shared/menu-icon.svg);
   background-size: 30px 30px;
   background-repeat: no-repeat;
 }
+
 
 .navatar {
   height: 30px;
