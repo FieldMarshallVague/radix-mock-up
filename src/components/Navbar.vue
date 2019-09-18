@@ -6,11 +6,14 @@
 
   <div>
     <b-navbar toggleable="lg" type="light" variant="">
+
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-      <!-- <b-navbar-brand href="#"><router-link to="/">Logo</router-link></b-navbar-brand> -->
-      <router-link class="nav-link logo-link" to="/">Logo</router-link>
+      <!-- <button type="button" aria-label="Toggle navigation" aria-controls="nav-collapse" aria-expanded="false" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
 
+      <router-link class="nav-link logo-link" to="/">Logo</router-link>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
@@ -46,7 +49,7 @@ nav.navbar.navbar-light a.nav-link.logo-link {
   color: var(--primary-brand-color);
   text-transform: uppercase;
   margin-left: 0;
-  margin-right: 1em;
+  margin-right: 0;
   padding: 0.5em 0.5em;
   font-weight:600;
 }
@@ -63,6 +66,17 @@ ul.navbar-nav li.nav-item a.nav-link {
 
 #nav-collapse {
   background-color: var(--background-color);
+
+  .navbar-nav {
+    margin-right:2em;
+  }
+
+  &.collapsing .navbar-nav{
+    margin-right:0em;
+  }
+  &.show .navbar-nav{
+    margin-right:0em;
+  }
 }
 
 nav.navbar.navbar-light {
@@ -110,20 +124,17 @@ nav.navbar.navbar-light {
 }
 
 nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
-// .navbar-toggler .navbar-toggler-icon {
-  color: red;
-  border: 2px solid #f00 !important;
-  background-color:#0000ff;
   background: url(/img/shared/menu-icon.svg);
-  background-size: 30px 30px;
+  background-size: 16px 14px;
   background-repeat: no-repeat;
+  background-position: left;
 }
 
 
 .navatar {
   height: 30px;
   width: 30px;
-  margin-left: 2em;
+  margin-left: 0;
   margin-right: 0.5em;
 
   & > img {

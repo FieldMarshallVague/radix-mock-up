@@ -33,3 +33,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size:0.9rem;
 }
+
+/*
+  note: needs to be in global since BS doesn't assign the scoped element ID to the inner span (which contains the icon).
+  todo: look into why this is.
+*/
+nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
+  background: url(/img/shared/menu-icon.svg);
+  background-size: 16px 14px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
