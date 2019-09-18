@@ -8,7 +8,8 @@
     <b-navbar toggleable="lg" type="light" variant="">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-      <b-navbar-brand href="#"><router-link to="/">Logo</router-link></b-navbar-brand>
+      <!-- <b-navbar-brand href="#"><router-link to="/">Logo</router-link></b-navbar-brand> -->
+      <router-link class="nav-link logo-link" to="/">Logo</router-link>
 
 
       <b-collapse id="nav-collapse" is-nav>
@@ -42,13 +43,26 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 
+nav.navbar.navbar-light a.nav-link.logo-link {
+  color: var(--primary-brand-color);
+  text-transform: uppercase;
+  margin-left: 0;
+  margin-right: 1em;
+  font-weight:600;
+}
+
 ul.navbar-nav li.nav-item a.nav-link {
   text-transform: uppercase;
   margin-left: 1em;
+  font-weight:600;
+
+  &.router-link-exact-active{
+    color: var(--nav-font-colour);
+  }
 }
 
 #nav-collapse {
-  background-color: #ffffff;
+  background-color: var(--background-color);
 }
 
 nav.navbar.navbar-light {
@@ -104,9 +118,8 @@ nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
 .navatar {
   height: 30px;
   width: 30px;
-  top: 5px;
-  position: relative;
   margin-left: 2em;
+  margin-right: 0.5em;
 
   & > img {
     width:30px;

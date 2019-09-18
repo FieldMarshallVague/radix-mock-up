@@ -13,16 +13,23 @@ Now it is OK to import Bootstrap stuff
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
 :root {
-  --background-color: #ffffff;
-  --test: #ff99cc;
+  --background-color: #fff;
+  --background-color-alt: #333;
   --primary-color: #fa6980;
+  --primary-brand-color: #fa6980;
   --border-color: #ebeded;
-  --nav-color: #333333;
-  --nav-color-alt: #888888;
+  --nav-font-color: #333;
+  --nav-font-color-alt: #888;
 }
 
 $theme-colors: (
   'primary': #0074d9,
-  'danger': #ff4136,
-  'danger2': #ff4136
+  'danger': #ff4136
 );
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size:0.9rem;
+}
