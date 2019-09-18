@@ -5,27 +5,23 @@
   </div> -->
 
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">Logo</b-navbar-brand>
-
+    <b-navbar toggleable="lg" type="light" variant="">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item><router-link to="/">Home</router-link></b-nav-item>
-          <b-nav-item><router-link to="/discovery">Discovery</router-link></b-nav-item>
-          <b-nav-item><router-link to="/photos">Photos</router-link></b-nav-item>
-          <b-nav-item><router-link to="/contact">Contact</router-link></b-nav-item>
-        </b-navbar-nav>
+      <b-navbar-brand href="#"><router-link to="/">Logo</router-link></b-navbar-brand>
 
-        <!-- Right aligned nav items -->
+
+      <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-          </b-nav-form>
+          <li class="nav-item"><router-link class="nav-link" to="/">Home</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/discovery">Discovery</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/photos">Photos</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/contact">Contact</router-link></li>
         </b-navbar-nav>
       </b-collapse>
+
+      <div class="navatar"><img src="/img/shared/girl.png" alt="user's avatar" /></div>
+
     </b-navbar>
   </div>
 
@@ -39,10 +35,83 @@ import Vue from "vue";
 export default Vue.extend({
   name: "Navbar",
   props: {
+
   }
 });
 </script>
 
 <style scoped lang="scss">
+
+ul.navbar-nav li.nav-item a.nav-link {
+  text-transform: uppercase;
+  margin-left: 1em;
+}
+
+#nav-collapse {
+  background-color: #ffffff;
+}
+
+nav.navbar.navbar-light {
+  button.navbar-toggler {
+    order: 0;
+  }
+
+  .navbar-brand {
+    order: 1;
+  }
+
+  #nav-collapse.navbar-collapse {
+    order: 2;
+  }
+
+  .navatar{
+    order: 3;
+  }
+} 
+
+@media screen and (max-width: 992px){
+  nav.navbar.navbar-light {
+    button.navbar-toggler {
+      order: 0;
+    }
+
+    .navbar-brand {
+      order: 1;
+    }
+
+    #nav-collapse.navbar-collapse {
+      order: 3;
+    }
+
+    .navatar{
+      order: 2;
+    }
+  } 
+}
+
+
+
+
+
+nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
+  color: red;
+  background-color:#0000ff;
+  background: url(/img/shared/menu-icon.svg);
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+
+.navatar {
+  height: 30px;
+  width: 30px;
+  top: 5px;
+  position: relative;
+  margin-left: 2em;
+
+  & > img {
+    width:30px;
+    height:30px;
+  }
+}
 
 </style>
