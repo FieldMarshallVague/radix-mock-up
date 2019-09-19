@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <Hero v-bind:content="heroContent" />
   </div>
 </template>
@@ -29,3 +28,51 @@ export default Vue.extend({
   }
 });
 </script>
+
+
+<style scoped lang="scss">
+
+.home{
+  width: 800px;
+  margin-left:auto;
+  margin-right:auto;
+
+  display:grid;  
+  align-content: start;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12, 1fr [col-start]);
+  grid-gap:30px;  
+  // grid-template-areas: "hero hero hero hero hero hero hero hero hero hero . .";
+  
+  @media screen and (max-width: 992px){
+    // grid-template-columns: auto;
+    // grid-template-rows: 80px 100px 80px;
+    // grid-template-areas: 
+    //   "hero . ."
+    //   "."
+    //   ".";
+  }
+}
+
+.hero {
+  border: 1px solid red;
+  grid-area: hero;
+  grid-column-start: col-start 1;
+  grid-column-end: col-start 10;
+}
+
+.more-news {
+  grid-area: more-news;
+}
+
+.trending {
+  grid-area: trending;
+}
+
+.happening-now {
+  grid-area: happening-now;
+}
+
+
+</style>
+
