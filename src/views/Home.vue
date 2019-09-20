@@ -1,29 +1,32 @@
 <template>
   <div class="home">
     <Hero v-bind:content="heroContent" />
+    <MoreNews v-bind:content="moreNewsContent" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Hero from "@/components/Hero.vue"; // @ is an alias to /src
-import HeroContent from "@/components/HeroContent";
+import MoreNews from "@/components/MoreNews.vue"; 
+import HeroContent from "@/models/HeroContent";
+import NewsArticle from '@/models/NewsArticle';
 
-const heroContent: HeroContent = {
-   title: "World News",
-   subTitle: "Amazing places in America to visit",
-   description: "For some reason — this country, this city, this neighborhood, this particular street —  is the place you are living a majority of your life in.",
-   linkUrl: "https://www.example/com"
-}
+import heroContent from '@/data/hero-content';
+import moreNewsContent from '@/data/more-news-content';
+
+
 
 export default Vue.extend({
   name: "home",
   components: {
-    Hero
+    Hero,
+    MoreNews
   },
   data() {
     return {
-      heroContent: heroContent
+      heroContent: heroContent,
+      moreNewsContent: moreNewsContent
     }
   }
 });
@@ -41,7 +44,7 @@ export default Vue.extend({
   align-content: start;
   grid-template-rows: auto;
   grid-template-columns: repeat(12, 1fr [col-start]);
-  grid-gap:30px;  
+  grid-gap:10px;  
   // grid-template-areas: "hero hero hero hero hero hero hero hero hero hero . .";
   
   @media screen and (max-width: 992px){
@@ -63,6 +66,8 @@ export default Vue.extend({
 
 .more-news {
   grid-area: more-news;
+  grid-column-start: col-start 10;
+  grid-column-end: col-start 12;
 }
 
 .trending {

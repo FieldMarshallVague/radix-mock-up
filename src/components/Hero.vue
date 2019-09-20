@@ -6,7 +6,6 @@
       {{ content.description }} 
       <button @click="goTo(content.linkUrl)">Learn more</button>
     </div>
-
   </div>
 </template>
 
