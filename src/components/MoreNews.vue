@@ -27,8 +27,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import NewsArticle from "@/components/NewsArticle";
-// import MoreNewsArticle from "@/components/MoreNewsArticle";
+import NewsArticle from "@/models/NewsArticle";
 
 export default Vue.extend({
   props: { content: { 
@@ -38,25 +37,30 @@ export default Vue.extend({
 
   data(){
     return {
-      articles: this.content
+      articles : [] as NewsArticle[],
     }
   },
 
-  components: {
-    // MoreNewsArticle
+  created(){
+    this.getArticles();
   },
 
   methods:{
-    goTo(url: string){
-      console.log(`going to url: ${url}`);
+
+    getArticles(){
+      // this.articles.concat(this.content);
+      this.articles = this.content.slice(0, 2);
     },
+
     pageForward(){
-
+      this.articles = this.content.slice(2, 4);
     },
-    pageBack(){
 
-    }
-  }  
+    pageBack(){
+      this.articles = this.content.slice(0, 2);
+    },
+  },
+
 });
 </script>
 

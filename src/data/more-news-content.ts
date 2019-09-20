@@ -36,7 +36,7 @@ const moreNewsContent : NewsArticle[] = [
     description: "Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat…",
     linkUrl: "https://www.example/com",
     dateTime: new Date()
-  }
+  },
 ]
 
 export default moreNewsContent;

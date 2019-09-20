@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import HeroContent from "@/components/HeroContent";
+import HeroContent from "@/models/HeroContent";
 
 export default Vue.extend({
   props: { content: { 

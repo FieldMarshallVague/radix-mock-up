@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import NewsArticle from "@/components/NewsArticle";
+import NewsArticle from "@/models/NewsArticle";
 
 export default Vue.extend({
   props: { content: { 
