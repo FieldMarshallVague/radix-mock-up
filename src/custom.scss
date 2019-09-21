@@ -21,9 +21,13 @@ Now it is OK to import Bootstrap stuff
   --nav-font-color: #333;
   --nav-font-color-alt: #888;
 
-  --grip-gap: 30px;
+  --grid-gap: 1rem;
 
-  --footer-border-color: #efefef;
+
+  // footer 
+  --footer-font-color: #fff;
+  --footer-links-color: #e0e0e0;
+  --footer-border-color: #bbb;
 }
 
 $theme-colors: (

@@ -36,7 +36,7 @@ export default Vue.extend({
 <style scoped lang="scss">
 
 .home{
-  width: 800px;
+  width: 1160px;
   margin-left:auto;
   margin-right:auto;
 

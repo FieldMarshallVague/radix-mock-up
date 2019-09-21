@@ -1,8 +1,8 @@
 <template>
   <footer>
     <div class="footer-content">
-      <div class="">
-          <h2>LOGO</h2>
+      <div class="logo">
+          <h2>Logo</h2>
       </div>
       <div class="links1">
         <ul>
@@ -29,8 +29,17 @@
         </ul>
       </div>
       <div class="search">
-        <input type="text" placeholder="Email" />
+        <div class="search-box">
+          <input type="text" placeholder="Email" />
+          <button type="submit"></button>
+        </div>
         <span>Stay in touch with us for the freshest products!</span>
+      </div>
+      <div class="social">
+        <a href="#" target="_blank"><img src="/img/icons/instagram.svg" alt="instagram" /></a>
+        <a href="#" target="_blank"><img src="/img/icons/twitter.svg" alt="twitter" /></a>
+        <a href="#" target="_blank"><img src="/img/icons/facebook.svg" alt="facebook" /></a>
+        <a href="#" target="_blank"><img src="/img/icons/web.svg" alt="web" /></a>
       </div>
     </div>    
   </footer>
@@ -56,9 +65,8 @@ footer{
 }
 
 .footer-content {
-  width: 800px;
-  margin-left:auto;
-  margin-right:auto;
+  width: 1160px;
+  margin: 3rem auto;
 
   display:grid;  
   align-content: start;
@@ -78,14 +86,44 @@ footer{
   }
 }
 
+ul{  
+  -webkit-padding-start: 0;
+  min-width:100px;
+}
+
 ul li {
   list-style-type: none;
+  text-align:left;
+  -webkit-padding-start: 0;
+  margin: 0;
+  padding: 0;
+}
 
+a{
+  margin:0;
+  padding:0;
+
+  &:link{
+    color:var(--footer-links-color);
+  }
+  &:visited{
+    color:var(--footer-links-color);
+  }
+  &:hover{
+    color:var(--footer-links-color);
+  }
+  &:active{
+    color:var(--footer-links-color);
+  }
 }
 
 .logo {
-  border: 1px solid red;
   grid-area: logo;
+  h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight:600;
+  }
 }
 
 .links1 {
@@ -103,14 +141,68 @@ ul li {
 .search {
   grid-area: search;
 
-  input[type=text]{
+  .search-box{
+    display:flex;
+    align-content: space-between;
     width:100%;
-    border:2px solid var(--footer-border-color)
+    padding: 0.5em;
+    border-radius: 0.25em;
+
+    border:2px solid var(--footer-border-color);
+  }
+
+  input[type=text]{
+    flex: 1;
+    border:0 none;
+    background-color: transparent;
+    font-size:0.8rem;
+    color: var(--footer-links-color);
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--footer-links-color);
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--footer-links-color);
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--footer-links-color);
+  }
+
+  button{
+    background: url(/img/icons/send.svg);
+    background-size: 16px 14px;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 20px;
+    height: 20px;
+    border: 0 none;
+    position: relative;
+    align-self:flex-end;
+  }
+
+  span {
+    font-size:0.7rem;
+    color: var(--footer-links-color);
   }
 }
 
 .social {
   grid-area: social;
+  display:flex;
+  flex-direction: row;
+  align-items:flex-start;
+
+  a {
+    flex:1;
+  }
+
+  img{
+    width:20px;
+    height:20px;
+  }
 }
 </style>
 
