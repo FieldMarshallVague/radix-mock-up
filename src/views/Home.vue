@@ -49,7 +49,7 @@ export default Vue.extend({
   align-content: start;
   grid-template-rows: auto;
   grid-template-columns: repeat(12, 1fr [col-start]);
-  grid-gap:10px;  
+  grid-gap: var(--grid-gap);
   grid-template-areas: 
     "hero hero hero hero hero hero hero more-news more-news more-news more-news more-news"
     "trending trending trending trending trending trending trending trending trending trending trending trending"
