@@ -3,6 +3,7 @@
     <Hero v-bind:content="heroContent" />
     <MoreNews v-bind:content="moreNewsContent" />
     <Trending v-bind:content="trendingContent" />
+    <HappeningNow v-bind:content="happeningNowContent" />
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import Vue from "vue";
 import Hero from "@/components/Hero.vue"; // @ is an alias to /src
 import MoreNews from "@/components/MoreNews.vue"; 
 import Trending from '@/components/Trending.vue';
+import HappeningNow from '@/components/HappeningNow.vue';
 
 import HeroContent from "@/models/HeroContent";
 import NewsArticle from '@/models/NewsArticle';
@@ -18,6 +20,7 @@ import NewsArticle from '@/models/NewsArticle';
 import heroContent from '@/data/hero-content';
 import moreNewsContent from '@/data/more-news-content';
 import trendingContent from '@/data/trending-content';
+import happeningNowContent from '@/data/happening-now-content';
 
 
 export default Vue.extend({
@@ -26,12 +29,14 @@ export default Vue.extend({
     Hero,
     MoreNews,
     Trending,
+    HappeningNow,
   },
   data() {
     return {
       heroContent: heroContent,
       moreNewsContent: moreNewsContent,
       trendingContent: trendingContent,
+      happeningNowContent: happeningNowContent,
     }
   }
 });
@@ -53,7 +58,7 @@ export default Vue.extend({
   grid-template-areas: 
     "hero hero hero hero hero hero hero more-news more-news more-news more-news more-news"
     "trending trending trending trending trending trending trending trending trending trending trending trending"
-    "happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now side-bar side-bar side-bar side-bar";
+    "happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now";
   
   @media screen and (max-width: 992px){
     // grid-template-columns: auto;

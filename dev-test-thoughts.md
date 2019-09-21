@@ -45,6 +45,7 @@ nice-to-haves
 
 - radix fav-icon
 - theme switcher
+- dynamic classes on pagination (to show available navigation)
 - loading animation
 - service worker
 - click-able arrows (i.e.  change to new content)
