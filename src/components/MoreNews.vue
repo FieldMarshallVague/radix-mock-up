@@ -8,7 +8,6 @@
       </div>
     </header>
     <ul>
-      <!-- <MoreNewsArticle v-bind:key="article.id" v-for="article in content" /> -->
       <li v-bind:key="article.id" v-for="article in articles" class="more-news-article">
         <h2>{{ article.category }}</h2>
         <h3>{{ article.title }}</h3>
@@ -20,7 +19,6 @@
           <span>1m ago</span>
         </div>
       </li>
-
     </ul>
   </section>
 </template>

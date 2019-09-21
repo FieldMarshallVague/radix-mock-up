@@ -60,8 +60,6 @@ footer{
   color: #fff;
   clear: both;
   position: relative;
-  height: 200px;
-  margin-top: -200px;
 }
 
 .footer-content {
@@ -84,19 +82,6 @@ footer{
     //   "."
     //   ".";
   }
-}
-
-ul{  
-  -webkit-padding-start: 0;
-  min-width:100px;
-}
-
-ul li {
-  list-style-type: none;
-  text-align:left;
-  -webkit-padding-start: 0;
-  margin: 0;
-  padding: 0;
 }
 
 a{

@@ -28,6 +28,11 @@ inner span not getting the scoped ID assigned (so styles were being ignored).
 
 - menu-icon was a chore
 
+vue-formatting won't work.
+
+- extensions installed aren't registered properly?
+- keeps saying no formatter for file type and none appear in available lists... ??
+
 
 ## vue docs are all different
 

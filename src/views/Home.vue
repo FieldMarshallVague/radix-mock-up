@@ -2,6 +2,7 @@
   <div class="home">
     <Hero v-bind:content="heroContent" />
     <MoreNews v-bind:content="moreNewsContent" />
+    <Trending v-bind:content="trendingContent" />
   </div>
 </template>
 
@@ -9,24 +10,28 @@
 import Vue from "vue";
 import Hero from "@/components/Hero.vue"; // @ is an alias to /src
 import MoreNews from "@/components/MoreNews.vue"; 
+import Trending from '@/components/Trending.vue';
+
 import HeroContent from "@/models/HeroContent";
 import NewsArticle from '@/models/NewsArticle';
 
 import heroContent from '@/data/hero-content';
 import moreNewsContent from '@/data/more-news-content';
-
+import trendingContent from '@/data/trending-content';
 
 
 export default Vue.extend({
   name: "home",
   components: {
     Hero,
-    MoreNews
+    MoreNews,
+    Trending,
   },
   data() {
     return {
       heroContent: heroContent,
-      moreNewsContent: moreNewsContent
+      moreNewsContent: moreNewsContent,
+      trendingContent: trendingContent,
     }
   }
 });
