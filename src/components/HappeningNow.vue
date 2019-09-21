@@ -7,38 +7,42 @@
         <img src="/img/shared/arrow.svg" @click="pageForward()" alt="arrow forward" />
       </div>
     </header>
-    <ul class="main">
-      <li :key="article.id" v-for="(article, index) in mainArticles" @click="goTo(article.linkUrl)" :class="`trending-article item-${index}`">
-        <picture>
-          <source :srcset="`/img/tablet/${ article.imageName }.png`" media="(min-width: 768px)">
-          <img :srcset="`/img/mobile/${ article.imageName }.png`" :alt="`${ article.imageAltText }`">
-        </picture>
-        <div class="snippet">
-          <h3>{{ article.title }}</h3>
-          <span>{{ article.description }}</span>
-          <div class="time">
-            <img src="/img/shared/clock.svg" alt="clock icon" />
-            <span>1m ago</span>
+    <div class="articles">
+      <ul class="main">
+        <li :key="article.id" v-for="(article, index) in mainArticles" @click="goTo(article.linkUrl)" :class="`trending-article item-${index}`">
+          <picture>
+            <source :srcset="`/img/large-desktop/${ article.imageName }.png`" media="(min-width: 1200px)">
+            <source :srcset="`/img/desktop/${ article.imageName }.png`" media="(min-width: 992px)">
+            <source :srcset="`/img/tablet/${ article.imageName }.png`" media="(min-width: 768px)">
+            <img :srcset="`/img/mobile/${ article.imageName }.png`" :alt="`${ article.imageAltText }`">
+          </picture>
+          <div class="snippet">
+            <h2>{{ article.category }}</h2>
+            <h3>{{ article.title }}</h3>
+            <span>{{ article.description }}</span>
+            <div class="time">
+              <img src="/img/shared/clock.svg" alt="clock icon" />
+              <span>1m ago</span>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-    <ul class="side-bar">
-      <li :key="article.id" v-for="(article, index) in sideArticles" @click="goTo(article.linkUrl)" :class="`trending-article item-${index}`">
-        <picture>
-          <source :srcset="`/img/tablet/${ article.imageName }.png`" media="(min-width: 768px)">
-          <img :srcset="`/img/mobile/${ article.imageName }.png`" :alt="`${ article.imageAltText }`">
-        </picture>
-        <div class="snippet">
-          <h3>{{ article.title }}</h3>
-          <span>{{ article.description }}</span>
-          <div class="time">
-            <img src="/img/shared/clock.svg" alt="clock icon" />
-            <span>1m ago</span>
+        </li>
+      </ul>
+      <ul class="side-bar">
+        <li :key="article.id" v-for="(article, index) in sideArticles" @click="goTo(article.linkUrl)" :class="`trending-article item-${index}`">
+          <picture>
+            <source :srcset="`/img/tablet/${ article.imageName }.png`" media="(min-width: 768px)">
+            <img :srcset="`/img/mobile/${ article.imageName }.png`" :alt="`${ article.imageAltText }`">
+          </picture>
+          <div class="snippet">
+            <h3>{{ article.title }}</h3>
+            <div class="time">
+              <img src="/img/shared/clock.svg" alt="clock icon" />
+              <span>1m ago</span>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -64,6 +68,9 @@ export default Vue.extend({
   },
 
   methods:{
+    goTo(url: string){
+      console.log(`going to url: ${url}`);
+    },
 
     getArticles(){
       this.mainArticles = this.content.slice(0, 2);
@@ -83,6 +90,8 @@ export default Vue.extend({
 
 });
 </script>
+
+
 
 <style scoped lang="scss">
 .happening-now{
@@ -115,43 +124,65 @@ h1{
   }
 }
 
-ul {
+.articles {
   
   display:grid;  
   align-content: start;
   grid-template-rows: auto;
-  grid-template-columns: repeat(12, 1fr [col-start]);
+  grid-template-columns: repeat(12,  [col-start] 1fr [col-end]);
   grid-gap: var(--grid-gap);
-  grid-template-areas: 
-    "item-1 item-1 item-1 item-1 item-2 item-2 item-2 item-2 item-3 item-3 item-3 item-3";
-
-  /* todo: make this dynamic */
-  li:nth-child(1){
-    grid-area: item-1;
-  }
-  
-  li:nth-child(2){
-    grid-area: item-2;
-  }
-  
-  li:nth-child(3){
-    grid-area: item-3;
-  }
-
-  li {
-    border-radius: 1rem;
-    // border: 1px dashed red;
-    height:350px;
-    overflow: hidden;
-  }
-  
+    
 }
 
-ul li picture{
+ul li {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+ul.main{
+  grid-column-start: col-start 1;
+  grid-column-end: col-start 9;    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  li{
+    position: relative;
+  }
+}
+
+ul.main li .snippet{
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+ul.side-bar{
+  grid-column-start: col-start 9;
+  grid-column-end: col-end 12;
+}
+
+ul.main li picture img, ul.side-bar li picture img{
+  height: 430px;
+}
+
+ul.main li picture{
   
   img {
     width: 100%;
-    height: 180px;
+    height: 430px;
+    object-fit: cover;
+  }
+}
+ul.side-bar li picture{
+  
+  img {
+    width: 100%;
+    height: 210px;
     object-fit: cover;
   }
 }
@@ -160,12 +191,18 @@ ul li picture{
   padding: 2rem;
 
   h3 {
+    font-size: 1rem;
+    font-weight: 800;
     color: var(--font-color);
   }
 
   span{
     color: var(--font-color-alt);
   }
+}
+
+.side-bar .snippet{
+  padding: 2rem 0;
 }
 
 .time{

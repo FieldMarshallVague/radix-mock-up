@@ -49,6 +49,9 @@ export default Vue.extend({
   },
 
   methods:{
+    goTo(url: string){
+      console.log(`going to url: ${url}`);
+    },
 
     getArticles(){
       // this.articles.concat(this.content);
@@ -122,8 +125,7 @@ ul {
   }
 
   li {
-    border-radius: 1rem;
-    // border: 1px dashed red;
+    border-radius: 0.5rem;
     height:350px;
     overflow: hidden;
   }
@@ -143,6 +145,8 @@ ul li picture{
   padding: 2rem;
 
   h3 {
+    font-size: 1rem;
+    font-weight: 800;
     color: var(--font-color);
   }
 
