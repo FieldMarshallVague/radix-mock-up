@@ -56,7 +56,7 @@ export default Vue.extend({
 <style scoped lang="scss">
 footer{
   width:100%;
-  background-color: #A6ADB4;
+  background-color: var(--footer-background-color);
   color: #fff;
   clear: both;
   position: relative;
@@ -141,22 +141,22 @@ a{
 
 .search {
   grid-area: search;
+  text-align: left;
 
   .search-box{
     display:flex;
     align-content: space-between;
     width:100%;
-    padding: 0.5em;
-    border-radius: 0.25em;
-
-    border:2px solid var(--footer-border-color);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    background-color: var(--search-box-background-color);
   }
 
   input[type=text]{
     flex: 1;
     border:0 none;
-    background-color: transparent;
     font-size:0.8rem;
+    background-color: transparent;
     color: var(--footer-links-color);
   }
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -191,6 +191,8 @@ a{
 
   span {
     font-size:0.7rem;
+    line-height:2rem;
+    align-self:flex-start;
     color: var(--footer-links-color);
   }
 }
