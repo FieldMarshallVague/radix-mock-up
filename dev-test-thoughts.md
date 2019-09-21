@@ -27,14 +27,6 @@ which assets do I need to export?
 - assume so, since they would be in normal circumstances
 - export all separately and label them for each of the 4 sizes
 
-is the header image wrong?
-
-- the alignment of the rhs seems off...
-  - should it stop at the end of the column guide?
-  - or does it need more space due to size?
-- no, it isn't.
-  - it's matching the margin of the 'more news' section
-
 maybe just use Vue for the components?
 
 - should be simple enough

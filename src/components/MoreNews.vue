@@ -65,4 +65,29 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 
+header{
+  display:flex;
+}
+h1{
+  flex-basis:50%;
+  font-size:1.6rem;
+  text-transform: uppercase;
+  font-weight:800;
+}
+.pagination{
+  flex-basis:50%;
+  justify-content: flex-end;
+  align-items: center;
+
+  img{
+    width:15px;
+    height:15px;
+
+    &:nth-child(1){
+      opacity: 0.5;
+      margin-right:2em;
+    }
+  }
+
+}
 </style>

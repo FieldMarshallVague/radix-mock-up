@@ -50,7 +50,10 @@ export default Vue.extend({
   grid-template-rows: auto;
   grid-template-columns: repeat(12, 1fr [col-start]);
   grid-gap:10px;  
-  // grid-template-areas: "hero hero hero hero hero hero hero hero hero hero . .";
+  grid-template-areas: 
+    "hero hero hero hero hero hero hero more-news more-news more-news more-news more-news"
+    "trending trending trending trending trending trending trending trending trending trending trending trending"
+    "happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now side-bar side-bar side-bar side-bar";
   
   @media screen and (max-width: 992px){
     // grid-template-columns: auto;
@@ -65,14 +68,10 @@ export default Vue.extend({
 .hero {
   border: 1px solid red;
   grid-area: hero;
-  grid-column-start: col-start 1;
-  grid-column-end: col-start 10;
 }
 
 .more-news {
   grid-area: more-news;
-  grid-column-start: col-start 10;
-  grid-column-end: col-start 12;
 }
 
 .trending {
@@ -83,6 +82,10 @@ export default Vue.extend({
   grid-area: happening-now;
 }
 
+
+.side-bar {
+  grid-area: side-bar;
+}
 
 </style>
 
