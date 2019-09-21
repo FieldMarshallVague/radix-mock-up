@@ -59,6 +59,11 @@ ul.navbar-nav li.nav-item a.nav-link {
   margin-left: 1em;
   font-weight:600;
 
+  &:hover{
+    color:var(--footer-links-hover-color);
+    transition: 0.2s linear;
+  }
+
   &.router-link-exact-active{
     color: var(--nav-font-colour);
   }

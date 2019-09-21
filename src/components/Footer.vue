@@ -110,7 +110,8 @@ a{
     color:var(--footer-links-color);
   }
   &:hover{
-    color:var(--footer-links-color);
+    color:var(--footer-links-hover-color);
+    transition: 0.3s linear;
   }
   &:active{
     color:var(--footer-links-color);
@@ -181,6 +182,11 @@ a{
     border: 0 none;
     position: relative;
     align-self:flex-end;
+
+    &:hover{
+      filter: invert(47%) sepia(54%) saturate(672%) hue-rotate(303deg) brightness(109%) contrast(96%);
+      transition: 0.1s linear;
+    }
   }
 
   span {
@@ -197,7 +203,14 @@ a{
 
   a {
     flex:1;
+
+    &:hover img{
+      filter: invert(47%) sepia(54%) saturate(672%) hue-rotate(303deg) brightness(109%) contrast(96%);
+      transition: 0.1s linear;
+    }
   }
+
+  
 
   img{
     width:20px;
