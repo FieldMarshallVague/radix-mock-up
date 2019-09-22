@@ -90,6 +90,7 @@ export default Vue.extend({
   border-bottom: 2px solid var(--border-color-alt);
 
   h1{
+    color: var(--font-color);
     font-size:1.2rem;
     margin: 0;
   }

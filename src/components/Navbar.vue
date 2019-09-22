@@ -1,17 +1,9 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link>|
-    <router-link to="/about">About</router-link>
-  </div> -->
 
   <div>
     <b-navbar toggleable="lg" type="light" variant="">
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <!-- <button type="button" aria-label="Toggle navigation" aria-controls="nav-collapse" aria-expanded="false" class="navbar-toggler">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
 
       <router-link class="nav-link logo-link" to="/">Logo</router-link>
 
@@ -24,7 +16,7 @@
         </b-navbar-nav>
       </b-collapse>
 
-      <div class="navatar"><img src="/img/shared/girl.png" alt="user's avatar" /></div>
+      <div class="navatar" @click="toggleNightMode()"><img src="/img/shared/girl.png" alt="user's avatar" /></div>
 
     </b-navbar>
   </div>
@@ -39,6 +31,13 @@ export default Vue.extend({
   name: "Navbar",
   props: {
 
+  },
+
+  methods: {
+    toggleNightMode(){
+      var body = document.body;
+      body.classList.toggle('night');
+    }
   }
 });
 </script>
@@ -71,18 +70,22 @@ ul.navbar-nav li.nav-item a.nav-link {
   margin-left: 1em;
   font-weight:600;
 
+  color: var(--font-color-alt);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
+
   &:hover{
-    color:var(--footer-links-hover-color);
+    color:var(--nav-links-hover-color);
     transition: 0.2s linear;
   }
 
   &.router-link-exact-active{
-    color: var(--nav-font-colour);
+    color: var(--nav-font-color-active);
   }
 }
 
 #nav-collapse {
   background-color: var(--background-color);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
 
   .navbar-nav {
     margin-right:2em;

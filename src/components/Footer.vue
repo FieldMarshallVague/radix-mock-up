@@ -57,7 +57,8 @@ export default Vue.extend({
 footer{
   width:100%;
   background-color: var(--footer-background-color);
-  color: #fff;
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
+  color: var(--footer-font-color);
   clear: both;
   position: relative;
 }
@@ -156,6 +157,7 @@ a{
     padding: 0.5em 1em;
     border-radius: 0.5em;
     background-color: var(--search-box-background-color);
+    transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
   }
 
   input[type=text]{

@@ -23,10 +23,13 @@ Now it is OK to import Bootstrap stuff
 
   --nav-font-color: #333;
   --nav-font-color-alt: #888;
+  --nav-links-hover-color: #fa6980;
 
   --font-color: #333;
   --font-color-alt: #888;
   --font-color-image: #fff;
+
+  --footer-font-color: #fff;
 
   --grid-gap: 2rem;
 
@@ -41,38 +44,47 @@ Now it is OK to import Bootstrap stuff
   --search-box-background-color: #{lighten($footer-bg-color, 3%)};
 
   --hover-transition-speed: 0.1s;
+  --slow-transition-multiplier: 3;
 }
 
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size:0.9rem;
+  background-color: var(--background-color);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
 }
 
 body.night {
+  
   --background-color: #444;
   --background-color-highlight: #888;
   --background-color-alt: #111;
   --primary-color: #fa6980;
   --primary-brand-color: #fa6980;
   --border-color: #666;
-  --border-color-alt: #333;
+  --border-color-alt: #fff;
 
   --nav-font-color: #fff;
   --nav-font-color-alt: #ccc;
+  --nav-font-color-active: #fa6980;
+  --nav-links-hover-color: #fa6980;
 
   --font-color: #fff;
   --font-color-alt: #ccc;
   --font-color-image: #fff;
 
   // footer 
-  $footer-bg-color: #A6ADB4;
+  $footer-bg-color: #333;
   --footer-background-color: #{$footer-bg-color};
   --footer-font-color: #fff;
   --footer-links-color: #e0e0e0;  
   --footer-links-hover-color: #fa6980;
   --footer-border-color: #bbb;
   --search-box-background-color: #{lighten($footer-bg-color, 3%)};
+
+  background-color: var(--background-color);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
 }
 
 /*
@@ -106,6 +118,7 @@ nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
     height:6rem;
   }
   h1{
+    color: var(--font-color);
     flex: 0 1 70%;
     font-size:1.6rem;
     text-transform: uppercase;
@@ -117,7 +130,7 @@ nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
     flex: 0 1 30%;
     justify-content: flex-end;
     align-self:center;
-
+    
     img{
       width:10px;
       height:10px;
@@ -129,4 +142,19 @@ nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
       }
     }
   }
+}
+
+.news-articles .pagination img {
+
+  filter: none;
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
+
+}
+
+body.night .news-articles .pagination img {
+
+  filter: brightness(120%);
+  filter: invert(47%) sepia(54%) saturate(672%) hue-rotate(303deg) brightness(109%) contrast(96%);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
+
 }
