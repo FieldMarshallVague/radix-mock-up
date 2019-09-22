@@ -53,10 +53,10 @@ export default Vue.extend({
   display:grid;  
   align-content: start;
   grid-template-rows: auto;
-  grid-template-columns: repeat(12, 1fr [col-start]);
+  grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
   grid-gap: var(--grid-gap);
   grid-template-areas: 
-    "hero hero hero hero hero hero hero more-news more-news more-news more-news more-news"
+    "hero hero hero hero hero hero hero hero hero hero more-news more-news"
     "trending trending trending trending trending trending trending trending trending trending trending trending"
     "happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now";
   
@@ -72,7 +72,10 @@ export default Vue.extend({
 
 .hero {
   border: 1px solid red;
-  grid-area: hero;
+  grid-area: hero;  
+  grid-column-start: col-start 1;
+  grid-column-end: col-start 10;
+  margin-right: calc(0px - var(--grid-gap));
 }
 
 .more-news {

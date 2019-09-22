@@ -1,5 +1,5 @@
 <template>
-  <section class="trending articles">
+  <section class="news-articles trending articles">
     <header>
       <h1>Trending</h1>
       <div class="pagination">
@@ -71,36 +71,6 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
-.trending{
-  
-}
-header{
-  display:flex;
-  height:6rem;
-}
-h1{
-  flex: 0 1 70%;
-  font-size:1.6rem;
-  text-transform: uppercase;
-  font-weight:800;
-  line-height: 6rem;
-}
-.pagination{
-  flex: 0 1 30%;
-  justify-content: flex-end;
-  align-items: center;
-
-  img{
-    width:15px;
-    height:15px;
-    cursor: pointer;
-
-    &:nth-child(1){
-      opacity: 0.5;
-      margin-right:2em;
-    }
-  }
-}
 
 ul {
   

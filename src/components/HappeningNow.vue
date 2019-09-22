@@ -1,5 +1,5 @@
 <template>
-  <section class="happening-now">
+  <section class="news-articles happening-now">
     <header>
       <h1>Happening Now</h1>
       <div class="pagination">
@@ -96,36 +96,6 @@ export default Vue.extend({
 
 
 <style scoped lang="scss">
-.happening-now{
-  
-}
-header{
-  display:flex;
-  height:6rem;
-}
-h1{
-  flex: 0 1 70%;
-  font-size:1.6rem;
-  text-transform: uppercase;
-  font-weight:800;
-  line-height: 6rem;
-}
-.pagination{
-  flex: 0 1 30%;
-  justify-content: flex-end;
-  align-items: center;
-
-  img{
-    width:15px;
-    height:15px;
-    cursor: pointer;
-
-    &:nth-child(1){
-      opacity: 0.5;
-      margin-right:2em;
-    }
-  }
-}
 
 .articles {
   

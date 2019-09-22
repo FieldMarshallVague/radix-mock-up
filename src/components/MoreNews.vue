@@ -1,5 +1,5 @@
 <template>
-  <section class="more-news">
+  <section class="news-articles more-news">
     <header>
       <h1>More News</h1>
       <div class="pagination">
@@ -68,33 +68,50 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 
-header{
+.news-articles.more-news header{
   display:flex;
+  height:4rem;
 }
-h1{
-  flex-basis:50%;
-  font-size:1.6rem;
-  text-transform: uppercase;
-  font-weight:800;
+
+.more-news{
+  margin-top: 4rem;
+  margin-right: -100px;
 }
-.pagination{
-  flex-basis:50%;
-  justify-content: flex-end;
-  align-items: center;
 
-  img{
-    width:15px;
-    height:15px;
-    cursor: pointer;
+.more-news header{
+  margin: 0 0 2rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: 2px solid var(--border-color-alt);
 
-    &:nth-child(1){
-      opacity: 0.5;
-      margin-right:2em;
-    }
+  h1{
+    font-size:1.2rem;
+    margin: 0;
   }
 }
 
 .more-news-article{
   cursor:pointer;
+  margin: 2rem 0;
+
+  h2{
+    color: var(--primary-brand-color);
+    font-size:1.2rem;
+    font-weight:800;
+  }
+
+  h3{
+    color: var(--font-color);
+    font-size:1.2rem;
+    font-weight:800;
+  }
+  .description {
+    color: var(--font-color-alt);
+    font-size:1rem;
+  }
+  .time{
+    margin: 0.5em 0;
+    color: var(--font-color-alt);
+    font-size:1rem;
+  }
 }
 </style>
