@@ -97,6 +97,10 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 
+section.happening-now{
+  margin-bottom:5rem;
+}
+
 .articles {
   
   display:grid;  

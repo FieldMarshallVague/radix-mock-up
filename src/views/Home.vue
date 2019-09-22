@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <Hero v-bind:content="heroContent" />
     <HeroImage v-bind:content="heroContent" />
+    <Hero v-bind:content="heroContent" />
     <MoreNews v-bind:content="moreNewsContent" />
     <Trending v-bind:content="trendingContent" />
     <HappeningNow v-bind:content="happeningNowContent" />
@@ -84,6 +84,14 @@ export default Vue.extend({
   grid-area: hero-start / hero-start / hero-end / 11;
   margin-right: 5rem;
   z-index: 1;
+}
+
+@supports(-ms-high-contrast: none){
+  /* todo: fix the ie grid problems  */
+}
+
+@supports(-ms-ime-align: auto){
+  /* todo: fix the ie Edge grid problems  */
 }
 
 .more-news {
