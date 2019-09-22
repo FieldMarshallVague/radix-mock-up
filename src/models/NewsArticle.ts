@@ -7,5 +7,6 @@ export default interface NewsArticle {
   imageName?: String,
   imageAltText?: String,
   linkUrl: String,
-  dateTime: Date
+  dateTime: Date,
+  author?: String,
 }

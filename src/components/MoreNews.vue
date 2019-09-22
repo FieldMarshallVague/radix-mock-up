@@ -8,7 +8,7 @@
       </div>
     </header>
     <ul>
-      <li v-bind:key="article.id" v-for="article in articles" class="more-news-article">
+      <li v-bind:key="article.id" v-for="article in articles" @click="goTo(article.linkUrl)" class="more-news-article">
         <h2>{{ article.category }}</h2>
         <h3>{{ article.title }}</h3>
         <div class="description">
@@ -44,6 +44,9 @@ export default Vue.extend({
   },
 
   methods:{
+    goTo(url: string){
+      console.log(`going to url: ${url}`);
+    },
 
     getArticles(){
       // this.articles.concat(this.content);
@@ -82,12 +85,16 @@ h1{
   img{
     width:15px;
     height:15px;
+    cursor: pointer;
 
     &:nth-child(1){
       opacity: 0.5;
       margin-right:2em;
     }
   }
+}
 
+.more-news-article{
+  cursor:pointer;
 }
 </style>

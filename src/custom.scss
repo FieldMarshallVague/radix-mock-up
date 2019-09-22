@@ -37,6 +37,8 @@ Now it is OK to import Bootstrap stuff
   --footer-links-hover-color: #fa6980;
   --footer-border-color: #bbb;
   --search-box-background-color: #{lighten($footer-bg-color, 3%)};
+
+  --hover-transition-speed: 0.1s;
 }
 
 $theme-colors: (

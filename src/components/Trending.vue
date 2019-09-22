@@ -93,6 +93,7 @@ h1{
   img{
     width:15px;
     height:15px;
+    cursor: pointer;
 
     &:nth-child(1){
       opacity: 0.5;
@@ -157,12 +158,16 @@ ul li picture{
 
 .time{
   display:flex;
+  margin-top: 1em;
 
   img {
     margin-right: 0.5rem;
   }
 } 
 
+.trending-article{
+  cursor:pointer;
+}
 </style>
 
 

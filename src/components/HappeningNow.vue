@@ -9,7 +9,7 @@
     </header>
     <div class="articles">
       <ul class="main">
-        <li :key="article.id" v-for="(article, index) in mainArticles" @click="goTo(article.linkUrl)" :class="`trending-article item-${index}`">
+        <li :key="article.id" v-for="(article, index) in mainArticles" @click="goTo(article.linkUrl)" :class="`happening-now-article item-${index}`">
           <picture>
             <source :srcset="`/img/large-desktop/${ article.imageName }.png`" media="(min-width: 1200px)">
             <source :srcset="`/img/desktop/${ article.imageName }.png`" media="(min-width: 992px)">
@@ -18,17 +18,19 @@
           </picture>
           <div class="snippet">
             <h2>{{ article.category }}</h2>
-            <h3>{{ article.title }}</h3>
-            <span>{{ article.description }}</span>
-            <div class="time">
-              <img src="/img/shared/clock.svg" alt="clock icon" />
-              <span>1m ago</span>
+            <div class="details">
+              <h3>{{ article.title }}</h3>
+              <span>{{ article.description }}</span>
+              <div class="time">
+                <img src="/img/shared/clock.svg" alt="clock icon" />
+                <span>1m ago</span>
+              </div>
             </div>
           </div>
         </li>
       </ul>
       <ul class="side-bar">
-        <li :key="article.id" v-for="(article, index) in sideArticles" @click="goTo(article.linkUrl)" :class="`trending-article item-${index}`">
+        <li :key="article.id" v-for="(article, index) in sideArticles" @click="goTo(article.linkUrl)" :class="`happening-now-article item-${index}`">
           <picture>
             <source :srcset="`/img/tablet/${ article.imageName }.png`" media="(min-width: 768px)">
             <img :srcset="`/img/mobile/${ article.imageName }.png`" :alt="`${ article.imageAltText }`">
@@ -37,7 +39,7 @@
             <h3>{{ article.title }}</h3>
             <div class="time">
               <img src="/img/shared/clock.svg" alt="clock icon" />
-              <span>1m ago</span>
+              <span>1m ago by <a href="#">{{ article.author }}</a></span>
             </div>
           </div>
         </li>
@@ -116,6 +118,7 @@ h1{
   img{
     width:15px;
     height:15px;
+    cursor: pointer;
 
     &:nth-child(1){
       opacity: 0.5;
@@ -151,14 +154,33 @@ ul.main{
   }
 }
 
-ul.main li .snippet{
+ul.main li .snippet {
   position: absolute;
   z-index: 999;
   top: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
+
+  color: var(--font-color-image);
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--font-color-image);
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--font-color-image);
+  }
+
+  span{
+    font-size: 1rem;
+    color: var(--font-color-image);
+  }
 }
 
 ul.side-bar{
@@ -167,24 +189,18 @@ ul.side-bar{
 }
 
 ul.main li picture img, ul.side-bar li picture img{
+  border-radius: 0.5rem;
+  height: 430px;
+  width: 100%;
+  object-fit: cover;
+}
+
+ul.main li picture img {
   height: 430px;
 }
 
-ul.main li picture{
-  
-  img {
-    width: 100%;
-    height: 430px;
-    object-fit: cover;
-  }
-}
-ul.side-bar li picture{
-  
-  img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-  }
+ul.side-bar li picture img {
+  height: 210px;
 }
 
 .snippet{
@@ -202,15 +218,31 @@ ul.side-bar li picture{
 }
 
 .side-bar .snippet{
-  padding: 2rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
-.time{
+.side-bar .snippet a {
+  text-decoration: underline;
+  &:link{ color: var(--font-color-alt); }
+  &:visited{ color: var(--font-color-alt); }
+  &:hover{ 
+    color: var(--primary-brand-color); 
+    transition: var(--hover-transition-speed);
+  }
+  &:active{ color: var(--font-color-alt); }
+}
+
+.happening-now-article .time{
   display:flex;
+  margin-top: 2em;
 
   img {
     margin-right: 0.5rem;
   }
+} 
+
+.side-bar .happening-now-article .time{
+  margin-top: 1em;
 } 
 
 </style>
