@@ -81,8 +81,8 @@ export default Vue.extend({
 
 .hero-image {
   // border: 1px solid red;
-  grid-area: hero-start / hero-start / hero-end / 10;
-  margin-right: calc(0px - var(--grid-gap));
+  grid-area: hero-start / hero-start / hero-end / 11;
+  margin-right: 5rem;
   z-index: 1;
 }
 
