@@ -45,6 +45,11 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 
+nav.navbar{
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
 nav.navbar.navbar-light a.nav-link.logo-link {
   color: var(--primary-brand-color);
   text-transform: uppercase;
