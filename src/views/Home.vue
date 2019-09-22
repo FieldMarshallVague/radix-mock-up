@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <Hero v-bind:content="heroContent" />
+    <HeroImage v-bind:content="heroContent" />
     <MoreNews v-bind:content="moreNewsContent" />
     <Trending v-bind:content="trendingContent" />
     <HappeningNow v-bind:content="happeningNowContent" />
@@ -10,6 +11,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Hero from "@/components/Hero.vue"; // @ is an alias to /src
+import HeroImage from "@/components/HeroImage.vue";
 import MoreNews from "@/components/MoreNews.vue"; 
 import Trending from '@/components/Trending.vue';
 import HappeningNow from '@/components/HappeningNow.vue';
@@ -27,6 +29,7 @@ export default Vue.extend({
   name: "home",
   components: {
     Hero,
+    HeroImage,
     MoreNews,
     Trending,
     HappeningNow,
@@ -54,7 +57,7 @@ export default Vue.extend({
   align-content: start;
   grid-template-rows: auto;
   grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
-  grid-gap: var(--grid-gap);
+  grid-gap: 0 var(--grid-gap);
   grid-template-areas: 
     "hero hero hero hero hero hero hero hero hero hero more-news more-news"
     "trending trending trending trending trending trending trending trending trending trending trending trending"
@@ -71,11 +74,16 @@ export default Vue.extend({
 }
 
 .hero {
-  border: 1px solid red;
-  grid-area: hero;  
-  grid-column-start: col-start 1;
-  grid-column-end: col-start 10;
+  // border: 1px solid red;
+  grid-area: hero-start / hero-start / hero-end / 8 ;
+  z-index: 2;
+}
+
+.hero-image {
+  // border: 1px solid red;
+  grid-area: hero-start / hero-start / hero-end / 10;
   margin-right: calc(0px - var(--grid-gap));
+  z-index: 1;
 }
 
 .more-news {
