@@ -144,6 +144,7 @@ export default Vue.extend({
 
 @media screen and (max-width:767px){
   .home{
+    max-width: 80vw;
 
     grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
     grid-gap: 0 var(--grid-gap);

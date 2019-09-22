@@ -82,7 +82,7 @@ export default Vue.extend({
   grid-template-areas: 
     "item-1 item-1 item-1 item-1 item-2 item-2 item-2 item-2 item-3 item-3 item-3 item-3";
 
-  /* todo: make this dynamic */
+  /* todo: make this dynamic - prob. should  have gone with list to start with */
   li:nth-child(1){
     grid-area: item-1;
   }
@@ -109,6 +109,20 @@ export default Vue.extend({
     grid-gap: var(--grid-gap);
     grid-template-areas: 
       "item-1 item-1 item-1 item-1 item-2 item-2 item-2 item-2";
+  }
+
+  .item-2{
+    display:none;
+  }
+}
+
+@media screen and (max-width:767px){
+  .trending ul{
+    grid-template-columns: repeat(4,  [col-start] 1fr  [col-end]);
+    grid-gap: var(--grid-gap);
+    grid-template-areas: 
+      "item-1 item-1 item-1 item-1"
+      "item-2 item-2 item-2 item-2";
   }
 
   .item-2{

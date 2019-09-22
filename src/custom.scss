@@ -49,6 +49,32 @@ body {
   font-size:0.9rem;
 }
 
+body.night {
+  --background-color: #444;
+  --background-color-highlight: #888;
+  --background-color-alt: #111;
+  --primary-color: #fa6980;
+  --primary-brand-color: #fa6980;
+  --border-color: #666;
+  --border-color-alt: #333;
+
+  --nav-font-color: #fff;
+  --nav-font-color-alt: #ccc;
+
+  --font-color: #fff;
+  --font-color-alt: #ccc;
+  --font-color-image: #fff;
+
+  // footer 
+  $footer-bg-color: #A6ADB4;
+  --footer-background-color: #{$footer-bg-color};
+  --footer-font-color: #fff;
+  --footer-links-color: #e0e0e0;  
+  --footer-links-hover-color: #fa6980;
+  --footer-border-color: #bbb;
+  --search-box-background-color: #{lighten($footer-bg-color, 3%)};
+}
+
 /*
   note: needs to be in global since BS doesn't assign the scoped element ID to the inner span (which contains the icon).
   todo: look into why this is.

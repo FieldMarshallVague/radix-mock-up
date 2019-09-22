@@ -143,4 +143,10 @@ export default Vue.extend({
     
   }
 }
+
+@media screen and (max-width:767px){
+  ul {
+    flex-direction:column;
+  }
+}
 </style>

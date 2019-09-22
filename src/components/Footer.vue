@@ -94,7 +94,7 @@ footer{
 
 @media screen and (max-width:767px){
   .footer-content{
-    max-width: 608px;
+    max-width: 80vw;
     grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
     grid-template-areas: 
       "logo logo logo"
@@ -149,6 +149,7 @@ a{
   text-align: left;
 
   .search-box{
+    max-width: 290px;
     display:flex;
     align-content: space-between;
     width:100%;
@@ -195,10 +196,15 @@ a{
   }
 
   span {
-    font-size:0.7rem;
-    line-height:2rem;
+    font-size:0.7em;
+    line-height:2em;
     align-self:flex-start;
     color: var(--footer-links-color);
+
+
+    @media screen and (max-width:767px){
+      font-size:1em;
+    }
   }
 }
 

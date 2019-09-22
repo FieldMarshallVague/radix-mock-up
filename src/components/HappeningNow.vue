@@ -265,6 +265,34 @@ ul.side-bar li picture img {
 
 }
 
+@media screen and (max-width:767px){
+  
+  ul.side-bar {
+
+    border-top:2px solid var(--border-color-alt);
+    padding-top:3em;
+    margin-top:1em;
+
+    grid-column-start: col-start 1;
+    grid-column-end: col-end 8;
+
+    display:flex;
+    flex-direction:column;
+
+    li.item-0 {
+      
+    }
+    
+    li.item-1 {
+      
+    }
+    
+    .item-2{
+      display:none;
+    }
+  }
+}
+
 </style>
 
 
