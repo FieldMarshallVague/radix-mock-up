@@ -77,6 +77,12 @@ export default Vue.extend({
   margin-top: 4rem;
   margin-right: -100px;
 }
+@media screen and (max-width:1799px){
+
+  .more-news{
+    margin-right: 0;
+  }
+}
 
 .more-news header{
   margin: 0 0 2rem 0;

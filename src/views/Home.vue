@@ -50,6 +50,11 @@ export default Vue.extend({
 
 .home{
   width: 1160px;
+
+  @media screen and (max-width:767px){
+    max-width: 608px;
+  }
+
   margin-left:auto;
   margin-right:auto;
 
@@ -71,19 +76,21 @@ export default Vue.extend({
     //   "."
     //   ".";
   }
+
+  
 }
 
-.hero {
-  // border: 1px solid red;
-  grid-area: hero-start / hero-start / hero-end / 8 ;
-  z-index: 2;
-}
 
 .hero-image {
   // border: 1px solid red;
   grid-area: hero-start / hero-start / hero-end / 11;
   margin-right: 5rem;
   z-index: 1;
+}
+.hero {
+  // border: 1px solid red;
+  grid-area: hero-start / hero-start / hero-end / 8 ;
+  z-index: 2;
 }
 
 @supports(-ms-high-contrast: none){
@@ -109,6 +116,22 @@ export default Vue.extend({
 
 .side-bar {
   grid-area: side-bar;
+}
+
+
+@media screen and (max-width:1799px){
+  .home{  
+    grid-template-areas: 
+      "hero hero hero hero hero hero hero hero more-news more-news more-news more-news"
+      "trending trending trending trending trending trending trending trending trending trending trending trending"
+      "happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now";    
+  }
+  .hero-image {
+    grid-area: hero-start / hero-start / hero-end / 9;
+  }
+  .hero {
+    grid-area: hero-start / hero-start / hero-end / 7;
+  }
 }
 
 </style>

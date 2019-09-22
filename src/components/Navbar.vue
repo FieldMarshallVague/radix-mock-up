@@ -48,6 +48,13 @@ export default Vue.extend({
 nav.navbar{
   max-width: 1800px;
   margin: 0 auto;
+
+  @media screen and (max-width:1799px){
+    max-width: 1440px;
+  }
+  @media screen and (max-width:1439px){
+    max-width: 768px;
+  }
 }
 
 nav.navbar.navbar-light a.nav-link.logo-link {

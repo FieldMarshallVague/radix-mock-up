@@ -1,5 +1,7 @@
 # Dev test thoughts
 
+## initial
+
 "Brief: The test is to create a responsive one page mock-up from the file supplied. Would be nice to see interactive/ animated sections but not essential. When we review your implementation we will - among other things - consider how you developed the pages. 
 
 Few tips:
@@ -8,9 +10,14 @@ Use the tools you feel most comfortable with.
 Write code you are happy with, not code you think we want to see.
 Relax! This will be fun, trust me."
 
+### design file
+
 Wow, been a while since I saw something this complete.
-  panic.
-  breathe.
+
+- panic.
+- breathe.
+
+## analysis
 
 OK, break up the page into distinct components
 
@@ -21,27 +28,32 @@ OK, break up the page into distinct components
 
 try to visualise how the page will collapse responsively.
 
-which assets do I need to export?
+## any obvious responsive issues?
+
+Not really, seems designed with mobile-first in mind.
+Not immediately clear how I'd do the hero collapse, but probably overlaid grids.
+
+## which assets do I need to export?
 
 - are the pictures important?
 - assume so, since they would be in normal circumstances
 - export all separately and label them for each of the 4 sizes
 
-maybe just use Vue for the components?
+## maybe just use Vue for the components?
 
 - should be simple enough
 - seems like a good fit
   - i.e. simple use-case
   - easier to create dynamic list
 
-must haves:
+## must haves:
 
 - exact visuals
 - aria attributes / usual a11y decorators
 - device-specific/responsive images (via srcset etc.)  
 - fully hosted
 
-nice-to-haves
+## nice-to-haves
 
 - radix fav-icon
 - theme switcher
@@ -54,3 +66,9 @@ nice-to-haves
   - scale transitions
   - blur
   - saturation
+
+
+## CSS Grid
+
+Really would benefit from spending more time with different layouts and maximising understanding of grid.
+It's so powerful and some really cool responsive features can be made FAR more easily 
