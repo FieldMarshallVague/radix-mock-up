@@ -91,7 +91,7 @@ export default Vue.extend({
 
   h1{
     color: var(--font-color);
-    font-size:1.2rem;
+    font-size:1.6rem;
     margin: 0;
   }
 }

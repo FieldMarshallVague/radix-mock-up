@@ -195,6 +195,8 @@ ul.side-bar li picture img {
 
 .side-bar .snippet{
   padding: 1rem 0 2rem 0;
+  background-color: var(--background-color-well);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
 }
 
 .side-bar .snippet a {
@@ -261,6 +263,12 @@ ul.side-bar li picture img {
     .item-2{
       display:none;
     }
+  }
+  
+  .side-bar .snippet{
+    padding: 1rem 0 2rem 0;
+    background-color: transparent;
+    transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
   }
 
 }

@@ -141,6 +141,8 @@ export default Vue.extend({
 
 .snippet{
   padding: 2rem;
+  background-color: var(--background-color-well);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
 
   h3 {
     font-size: 1rem;

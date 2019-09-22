@@ -13,7 +13,10 @@ Now it is OK to import Bootstrap stuff
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
 :root {
-  --background-color: #fff;
+  // --background-color: #fff;
+  --background-color: #F6F8F9;
+  --background-color-well: #fff;
+  
   --background-color-highlight: #f4f4f4;
   --background-color-alt: #333;
   --primary-color: #fa6980;
