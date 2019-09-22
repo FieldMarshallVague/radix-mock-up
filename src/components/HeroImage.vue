@@ -39,19 +39,15 @@ export default Vue.extend({
 @media screen and (max-width: 1439px){
   .hero-image{
     height: 400px;
+    min-width: 100vw;
+    // border: 1px solid red;
+    position: absolute;
+    left: 0;
   }
-
-  /* todo: hacky cludge, replace with proper responsive implementation. */
 
   .hero-image picture img {
     height: 400px;
-    object-fit: cover;
-    position: absolute;
-    width: 200%;
-    overflow: hidden;
-    left: 0;
-    margin-left: -35%;
-    max-width: 95vw;
+    width: 100%;
   }
 }
 
