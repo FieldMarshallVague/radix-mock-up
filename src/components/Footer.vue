@@ -63,7 +63,13 @@ footer{
 }
 
 .footer-content {
-  width: 1160px;
+  width:100%;
+  max-width: 1160px;
+  
+  @media screen and (max-width:1799px){
+    max-width: 1160px;
+  }
+
   margin: 3rem auto;
 
   display:grid;  
@@ -73,14 +79,28 @@ footer{
   grid-gap:var(--grid-gap);
   grid-template-areas:
     "logo links1 links2 links3 . . search search search . social social";
-    
-  @media screen and (max-width: 992px){
-    // grid-template-columns: auto;
-    // grid-template-rows: 80px 100px 80px;
-    // grid-template-areas: 
-    //   "hero . ."
-    //   "."
-    //   ".";
+}
+
+
+@media screen and (max-width:1439px){
+  .footer-content{
+    max-width: 608px;
+    grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
+    grid-template-areas: 
+      "logo . . .  links1 links2 links3 ."
+      "search search search search . social social social";
+  }
+}
+
+@media screen and (max-width:767px){
+  .footer-content{
+    max-width: 608px;
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+    grid-template-areas: 
+      "logo logo logo"
+      "links1 links2 links3"
+      "search search search"
+      "social social social";
   }
 }
 

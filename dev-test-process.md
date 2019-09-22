@@ -79,3 +79,8 @@ Can see on IPS monitor a slight difference between navbar and header bg.
 - might have some margin/paddings creep
 
 
+## painted into corner
+
+By trying to put the pagination on the whole trending page.
+i.e.  Rather than making button paginate two comps at once
+Forces me to use a single grid-item and makes the subsequent code messier.

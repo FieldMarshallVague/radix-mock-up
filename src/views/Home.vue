@@ -49,11 +49,8 @@ export default Vue.extend({
 <style scoped lang="scss">
 
 .home{
-  width: 1160px;
 
-  @media screen and (max-width:767px){
-    max-width: 608px;
-  }
+  width: 1160px;
 
   margin-left:auto;
   margin-right:auto;
@@ -67,16 +64,6 @@ export default Vue.extend({
     "hero hero hero hero hero hero hero hero hero hero more-news more-news"
     "trending trending trending trending trending trending trending trending trending trending trending trending"
     "happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now";
-  
-  @media screen and (max-width: 992px){
-    // grid-template-columns: auto;
-    // grid-template-rows: 80px 100px 80px;
-    // grid-template-areas: 
-    //   "hero . ."
-    //   "."
-    //   ".";
-  }
-
   
 }
 
@@ -134,5 +121,44 @@ export default Vue.extend({
   }
 }
 
-</style>
+@media screen and (max-width:1439px){
+  .home{
 
+    max-width: 608px;
+
+    grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
+    grid-gap: 0 var(--grid-gap);
+    grid-template-areas: 
+      "hero hero hero hero hero hero hero hero"
+      "more-news more-news more-news more-news more-news more-news more-news more-news"
+      "trending trending trending trending trending trending trending trending"
+      "happening-now happening-now happening-now happening-now happening-now happening-now happening-now happening-now";
+  }
+  .hero-image {
+    grid-area: hero-start / hero-start / hero-end / hero-end;
+  }
+  .hero {
+    grid-area: hero-start / hero-start / hero-end / hero-end;
+  }
+}
+
+@media screen and (max-width:767px){
+  .home{
+
+    grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+    grid-gap: 0 var(--grid-gap);
+    grid-template-areas: 
+      "hero hero hero hero"
+      "more-news more-news more-news more-news"
+      "trending trending trending trending"
+      "happening-now happening-now happening-now happening-now";
+  }
+  .hero-image {
+    grid-area: hero-start / hero-start / hero-end / hero-end;
+  }
+  .hero {
+    grid-area: hero-start / hero-start / hero-end / hero-end;
+  }
+}
+
+</style>

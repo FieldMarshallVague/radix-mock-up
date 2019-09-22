@@ -83,4 +83,11 @@ export default Vue.extend({
     margin-top:1rem;
   }
 }
+
+
+@media screen and (max-width: 1439px){
+  .hero {
+    height: 400px;
+  }
+}
 </style>

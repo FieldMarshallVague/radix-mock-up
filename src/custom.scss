@@ -49,11 +49,6 @@ body {
   font-size:0.9rem;
 }
 
-
-button:focus {
-  outline: none;
-}
-
 /*
   note: needs to be in global since BS doesn't assign the scoped element ID to the inner span (which contains the icon).
   todo: look into why this is.

@@ -77,8 +77,8 @@ export default Vue.extend({
   margin-top: 4rem;
   margin-right: -100px;
 }
-@media screen and (max-width:1799px){
 
+@media screen and (max-width:1799px){
   .more-news{
     margin-right: 0;
   }
@@ -133,4 +133,14 @@ export default Vue.extend({
   }
 } 
 
+@media screen and (max-width:1439px){
+  ul{
+    display:flex;
+    flex-direction:row;
+  }
+  ul li {
+    flex-basis: 0 1 50%;
+    
+  }
+}
 </style>

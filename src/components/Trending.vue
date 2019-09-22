@@ -72,7 +72,7 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 
-ul {
+.trending ul {
   
   display:grid;  
   align-content: start;
@@ -103,7 +103,20 @@ ul {
   
 }
 
-ul li picture{
+@media screen and (max-width:1439px){
+  .trending ul{
+    grid-template-columns: repeat(8,  [col-start] 1fr  [col-end]);
+    grid-gap: var(--grid-gap);
+    grid-template-areas: 
+      "item-1 item-1 item-1 item-1 item-2 item-2 item-2 item-2";
+  }
+
+  .item-2{
+    display:none;
+  }
+}
+
+.trending ul li picture{
   
   img {
     width: 100%;
