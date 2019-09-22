@@ -14,6 +14,7 @@ Now it is OK to import Bootstrap stuff
 
 :root {
   --background-color: #fff;
+  --background-color-highlight: #f4f4f4;
   --background-color-alt: #333;
   --primary-color: #fa6980;
   --primary-brand-color: #fa6980;
@@ -67,4 +68,18 @@ nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
   background-size: 16px 14px;
   background-repeat: no-repeat;
   background-position: left;
+}
+
+
+/*
+  hover animation effect for all article images
+*/
+.articles ul li picture img {
+  transition: all calc(var(--hover-transition-speed) * 3) ease-in-out;
+}
+.articles ul li:hover picture img {
+  filter: saturate(140%);
+  filter: brightness(120%);
+  filter: contrast(120%);
+  transition: all calc(var(--hover-transition-speed) * 3) ease-in-out;
 }

@@ -1,5 +1,5 @@
 <template>
-  <section class="trending">
+  <section class="trending articles">
     <header>
       <h1>Trending</h1>
       <div class="pagination">

@@ -137,10 +137,12 @@ h1{
     
 }
 
-ul li {
+.articles ul li {
   border-radius: 0.5rem;
   overflow: hidden;
+  cursor: pointer;
 }
+
 
 ul.main{
   grid-column-start: col-start 1;
