@@ -146,10 +146,12 @@ export default Vue.extend({
     font-size: 1rem;
     font-weight: 800;
     color: var(--font-color);
+    transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
   }
 
   span{
     color: var(--font-color-alt);
+    transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
   }
 }
 

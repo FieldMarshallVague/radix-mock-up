@@ -143,6 +143,11 @@ nav.navbar.navbar-light {
   border: 0;
 }
 
+body.night .navbar-toggler{
+  filter: invert(47%) sepia(54%) saturate(672%) hue-rotate(303deg) brightness(109%) contrast(96%);
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
+}
+
 nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
   background: url(/img/shared/menu-icon.svg);
   background-size: 16px 14px;

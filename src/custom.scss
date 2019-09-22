@@ -44,7 +44,7 @@ Now it is OK to import Bootstrap stuff
   --search-box-background-color: #{lighten($footer-bg-color, 3%)};
 
   --hover-transition-speed: 0.1s;
-  --slow-transition-multiplier: 3;
+  --slow-transition-multiplier: 1;
 }
 
 
@@ -103,13 +103,13 @@ nav.navbar.navbar-light button.navbar-toggler span.navbar-toggler-icon {
   hover animation effect for all article images
 */
 .articles ul li picture img {
-  transition: all calc(var(--hover-transition-speed) * 3) ease-in-out;
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
 }
 .articles ul li:hover picture img {
   filter: saturate(140%);
   filter: brightness(120%);
   filter: contrast(120%);
-  transition: all calc(var(--hover-transition-speed) * 3) ease-in-out;
+  transition: all calc(var(--hover-transition-speed) * var(--slow-transition-multiplier)) ease-in-out;
 }
 
 .news-articles {
