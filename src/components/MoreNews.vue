@@ -94,15 +94,17 @@ export default Vue.extend({
   margin: 2rem 0;
 
   h2{
+    text-transform: uppercase;
     color: var(--primary-brand-color);
-    font-size:1.2rem;
+    font-size:1rem;
     font-weight:800;
   }
 
   h3{
     color: var(--font-color);
-    font-size:1.2rem;
+    font-size:1rem;
     font-weight:800;
+    margin-bottom: 0;
   }
   .description {
     color: var(--font-color-alt);
@@ -114,4 +116,15 @@ export default Vue.extend({
     font-size:1rem;
   }
 }
+
+
+.more-news-article .time{
+  display:flex;
+  margin-top: 0.5rem;
+
+  img {
+    margin-right: 0.5rem;
+  }
+} 
+
 </style>

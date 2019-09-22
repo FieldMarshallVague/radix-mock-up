@@ -70,3 +70,10 @@ consider using 'extends' syntax for variants of article units
   - e.g. where they differ by having a subtitle or not
 consider using 'slots' to override the same behaviour
 
+## background colours
+
+Just noticed the background isn't pure white.  
+Can see on IPS monitor a slight difference between navbar and header bg.
+
+- fix this after the responsive work.
+- might have some margin/paddings creep
