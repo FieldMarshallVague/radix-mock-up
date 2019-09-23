@@ -1,9 +1,11 @@
 # proposed changes
 
-Hard to know.  I'd like to know who the target audience was and what the site was trying to do.
+Hard to know.  I'd like to know who the target audience was and what the site was trying to do.  
+Nice to have: Clear idea of people's use-cases, the context of their visits.
 
 - With this in mind, I'd make sure that the information architecture provide some value in that area.
 - Styles could match the audience's taste, etc.
+- Provide wow factor, stickiness or unobtrusive effectiveness as required.
 
 ## it's a nice, clean site, but it's fairly generic
 
