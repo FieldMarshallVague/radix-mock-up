@@ -12,10 +12,12 @@ Relax! This will be fun, trust me."
 
 ### design file
 
-Wow, been a while since I saw something this complete.
+Wow, been a while since I saw something this complete.  
 
 - panic.
 - breathe.
+
+  - I'm used to being 'talked at' and coming up with something, but it always nice to work from something concrete.  I like to offer improvements where I see them.
 
 ## analysis
 
@@ -56,7 +58,7 @@ Not immediately clear how I'd do the hero collapse, but probably overlaid grids.
 
 ## nice-to-haves
 
-- radix fav-icon?
+- fav-icon?
 - theme switcher
 - dynamic classes on pagination (to show available navigation)
 - loading animation
@@ -64,16 +66,22 @@ Not immediately clear how I'd do the hero collapse, but probably overlaid grids.
 - click-able arrows (i.e.  change to new content)
 - animated background images
 
-  - scale transitions
-  - blur
-  - saturation
+  - scale transitions?
+    - bicubic resize is OK, but dependent on resolution scaling can flicker blurry
+  - blur/grayscale?  i.e.  down-grading
+  - saturation/contrast/brightness?  i.e. up-grading
 
+- json-file data loading via fetch (or rxjs with update-able data)
 
 ## CSS Grid
 
 Really would benefit from spending more time with different layouts and maximising understanding of grid.
-It's so powerful and some really cool responsive features can be made FAR more easily 
+It's so powerful and some really cool responsive features can be made FAR more easily.
+
+## Flex-box
+
+Gotten a bit rusty with it.  Flex or Grid?  Not always obvious at first glance.  Sometimes just start doing it in flex and realise grid was easier to align.
 
 ## Pagination
 
-implementing actual pagination would make some of the CSS easier
+implementing actual pagination would make some of the CSS easier.
