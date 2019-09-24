@@ -80,7 +80,9 @@ Utilise CSS Grid more thoroughly (see Responsive Mondrian).
 
     - get away from rounded edges and rectangles
 
-- custom fonts?
+- custom/animated fonts?
+
+  - wacky, but very novel and cool
 
 - could have used slot-based components to increase re-use of code.
 

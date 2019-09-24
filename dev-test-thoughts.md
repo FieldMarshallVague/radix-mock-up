@@ -10,14 +10,6 @@ Use the tools you feel most comfortable with.
 Write code you are happy with, not code you think we want to see.
 Relax! This will be fun, trust me."
 
-### design file
-
-Wow, been a while since I saw something this complete.  
-
-- panic.
-- breathe.
-
-  - I'm used to being 'talked at' and coming up with something, but it always nice to work from something concrete.  I like to offer improvements where I see them.
 
 ## analysis
 
@@ -52,7 +44,7 @@ Not immediately clear how I'd do the hero collapse, but probably overlaid grids.
 ## must haves
 
 - exact visuals
-- aria attributes / usual a11y decorators
+- semantic html / aria attributes / usual a11y decorators
 - device-specific/responsive images (via srcset etc.)  
 - fully hosted
 
