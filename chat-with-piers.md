@@ -15,7 +15,7 @@ Chat with CEO Piers at 3:30pm on Tuesday 1st Oct 2019.
 
   - digital ownership is a great idea.
 
-- blockchain seemed ideal, but obvious issues with scaling (speed of confirmation, power consumption)
+- bitcoin-based blockchain seemed ideal, but obvious issues with scaling (speed of confirmation, power consumption)
 - when I read about Radix, I followed the breadcrumbs to Lamport's logical clocks
 
   - I was impressed by the simplicity and the reduction in need for peer-review/confirmation.
@@ -63,9 +63,11 @@ Chat with CEO Piers at 3:30pm on Tuesday 1st Oct 2019.
   - Calibrator app.  real-time IoT integration for on-site sensor calibration.
 
     - First enterprise-level IoT project.
+    - Big success for their business.
   - Smart Machines.  Dashboard for estate asset management.
   
     - Google maps overlay, vending machine data viewer with dynamic SVG icons and zoom-clustering.
+    - Was most highly-valued part of dashboard and clients spoke well of it (was regarded as the only successful module).
 
 ### Where do I want to go with this?
 
@@ -77,3 +79,20 @@ Chat with CEO Piers at 3:30pm on Tuesday 1st Oct 2019.
   - Improved speed, UX and trust.
 - I want to be flexible in my location and earn well.
 - I want to keep my passion for solution development and using new technology to solve problems.
+
+
+###  Questions for Piers
+
+- Is the development of quantum-computing a mitigating factor in the future success of Radix?
+
+  - i.e.  are plans in place to protect against it?
+
+- I see a lot of alpha/beta-tags but Radix seems busy building use-cases for the DLT already.
+
+  - How is it going?
+  - What seems the most promising so far?
+  - How is the financial transaction-integration going?  Where do you plan to put it at street-level?
+
+- Can you clarify how people are incentivised to host nodes?
+
+  - I understand the price will be kept steady via supply management.
