@@ -82,6 +82,24 @@ Chat with CEO Piers at 3:30pm on Tuesday 1st Oct 2019.
 
 ###  Questions for Piers
 
+- What’s Radix’s position on enabling privacy?
+
+  - E.g.  it’s a big issue in crypto, is Radix championing it?
+
+- How do you see the company being successful?
+
+  - e.g.  what milestones would need to be hit?
+
+> 10.5.3.1 year visions: be most used in world (dlt)
+> Talking to crypto exchanges, like binance.  
+> Talking to banks in London and Switzerland (slow burn).
+> Target: Business-as-usual software
+
+Consider asking about a mash-style implementation of easy node hosting setup.
+	E.g. automated builds scripts, crypto-payments
+Are you planning/working with any banks/exchanges to integrate into existing payment systems?
+
+
 - Are the cryptographic protocols of Radix designed to be replaceable in the event of quantum computing becoming a problem?
 
   - I'm aware of the fact that the current level of FUD is overblown, just wondering if there is a strategy planned or in place.
