@@ -10,7 +10,7 @@ Chat with CEO Piers at 3:30pm on Tuesday 1st Oct 2019.
 
   - loved the idea of replacing lawyers, banks, agents etc. with code.
 
-    - removal of greedy middle-men.  
+    - removal of bloated middle-men.  
     - DLTs bring to mind the idea of Heinlein's 'witnesses' from SIASL.  In that they provide an immutable, agreed truth and it really resonated as solving a huge problem in trust.  Now it seems like we have something similar with this technology.
 
   - digital ownership is a great idea.
@@ -80,12 +80,13 @@ Chat with CEO Piers at 3:30pm on Tuesday 1st Oct 2019.
 - I want to be flexible in my location and earn well.
 - I want to keep my passion for solution development and using new technology to solve problems.
 
-
 ###  Questions for Piers
 
-- Is the development of quantum-computing a mitigating factor in the future success of Radix?
+- Are the cryptographic protocols of Radix designed to be replaceable in the event of quantum computing becoming a problem?
 
-  - i.e.  are plans in place to protect against it?
+  - I'm aware of the fact that the current level of FUD is overblown, just wondering if there is a strategy planned or in place.
+  - but to be clear, is the development of quantum-computing a mitigating factor in the future success of Radix?
+  - if not, are plans in place to protect against it?
 
 - I see a lot of alpha/beta-tags but Radix seems busy building use-cases for the DLT already.
 
@@ -95,4 +96,5 @@ Chat with CEO Piers at 3:30pm on Tuesday 1st Oct 2019.
 
 - Can you clarify how people are incentivised to host nodes?
 
-  - I understand the price will be kept steady via supply management.
+  - I understand the price will be kept steady via supply management.  I can see token being earned, but if they don't appreciate, won't that deter investor-techies?
+
